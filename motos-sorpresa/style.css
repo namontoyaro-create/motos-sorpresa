@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   INICIO
+========================= */
+
+#inicio {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(circle,
+            #06232c 0%,
+            #001015 40%,
+            #000 75%);
+
+    z-index: 1000;
+}
+
+.inicio-contenido {
+    text-align: center;
+}
+
+#inicio h1 {
+    color: cyan;
+
+    font-size: 24px;
+
+    line-height: 1.6;
+    letter-spacing: 4px;
+
+    margin-bottom: 35px;
+
+    text-shadow:
+        0 0 8px cyan,
+        0 0 20px cyan,
+        0 0 35px #008cff;
+}
+
+#descubrir {
+    padding: 14px 35px;
+
+    border-radius: 30px;
+
+    border: 2px solid cyan;
+
+    background: transparent;
+
+    color: cyan;
+
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 10px cyan,
+        0 0 20px cyan;
+}
+
+
+/* =========================
+   ESCENA
+========================= */
+
+#escena {
+    display: none;
+
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at center,
+            #07303a 0%,
+            #001218 35%,
+            #000 75%);
+}
+
+
+/* =========================
+   LUZ CENTRAL
+========================= */
+
+.luz-central {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 500px;
+    height: 500px;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(0,255,255,.20),
+            rgba(0,100,255,.05) 50%,
+            transparent 75%);
+
+    filter: blur(25px);
+}
+
+
+/* =========================
+   RAMO CENTRAL
+========================= */
+
+#ramo {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 150px;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 50;
+
+    border-radius: 10px;
+
+    filter:
+        drop-shadow(0 0 10px cyan)
+        drop-shadow(0 0 25px #008cff);
+}
+
+
+/* =========================
+   MOTOS
+========================= */
+
+.moto-orbita {
+    position: absolute;
+
+    width: 100px;
+
+    transform: translate(-50%, -50%);
+
+    object-fit: contain;
+
+    border-radius: 10px;
+
+    z-index: 20;
+
+    filter:
+        drop-shadow(0 0 8px cyan)
+        drop-shadow(0 0 18px #008cff);
+}
+
+
+/* =========================
+   PALABRAS
+========================= */
+
+.palabra-orbita {
+    position: absolute;
+
+    transform: translate(-50%, -50%);
+
+    color: #5fffff;
+
+    font-size: 19px;
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    z-index: 30;
+
+    text-shadow:
+        0 0 5px cyan,
+        0 0 12px cyan,
+        0 0 25px #008cff;
+}
+
+
+/* CELULAR */
+
+@media(max-width: 700px) {
+
+    #ramo {
+        width: 105px;
+    }
+
+    .moto-orbita {
+        width: 65px;
+    }
+
+    .palabra-orbita {
+        font-size: 12px;
+    }
+
+}
