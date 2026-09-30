@@ -13,6 +13,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const musica = document.getElementById("musica");
     const estadoMusica = document.getElementById("estado-musica");
 
+    const valorAleatorio = new Uint32Array(1);
+
+    function aleatorio() {
+        globalThis.crypto.getRandomValues(valorAleatorio);
+        return valorAleatorio[0] / 4294967296;
+    }
+
     function mostrarErrorMusica(error) {
         console.error("Error reproduciendo música:", error);
         musica.controls = true;
@@ -112,13 +119,13 @@ document.addEventListener("DOMContentLoaded", function () {
             estrella.className = "estrella";
 
             estrella.style.left =
-                Math.random() * 100 + "%";
+                aleatorio() * 100 + "%";
 
             estrella.style.top =
-                Math.random() * 100 + "%";
+                aleatorio() * 100 + "%";
 
             const tamaño =
-                Math.random() * 3 + 1;
+                aleatorio() * 3 + 1;
 
             estrella.style.width =
                 tamaño + "px";
@@ -127,10 +134,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 tamaño + "px";
 
             estrella.style.animationDelay =
-                Math.random() * 3 + "s";
+                aleatorio() * 3 + "s";
 
             estrella.style.animationDuration =
-                (Math.random() * 2 + 1.5) + "s";
+                (aleatorio() * 2 + 1.5) + "s";
 
             estrellas.appendChild(estrella);
         }
@@ -157,19 +164,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 "❤";
 
             corazon.style.left =
-                Math.random() * 100 + "%";
+                aleatorio() * 100 + "%";
 
             corazon.style.top =
-                (Math.random() * 100 + 70) + "%";
+                (aleatorio() * 100 + 70) + "%";
 
             corazon.style.fontSize =
-                (Math.random() * 17 + 10) + "px";
+                (aleatorio() * 17 + 10) + "px";
 
             corazon.style.animationDuration =
-                (Math.random() * 10 + 8) + "s";
+                (aleatorio() * 10 + 8) + "s";
 
             corazon.style.animationDelay =
-                -(Math.random() * 15) + "s";
+                -(aleatorio() * 15) + "s";
 
             corazones.appendChild(corazon);
         }
