@@ -1,44 +1,38 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Para ti ❤️</title>
 
-    <link rel="stylesheet"
-          href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
-
+    <!-- PANTALLA INICIAL -->
     <section id="inicio">
 
         <div class="inicio-contenido">
 
+            <div class="corazon-inicio">
+                ❤️
+            </div>
+
             <h1>
-
                 A TI TE GUSTAN LAS MOTOS
-
                 <br>
-
-                A MÍ ME GUSTAS TÚ MI AMOR ❤️
-
+                A MÍ ME GUSTAS TÚ
             </h1>
 
+            <p>
+                Tengo una sorpresa para ti...
+            </p>
 
             <button id="descubrir">
-
                 DESCUBRIR
-
             </button>
 
         </div>
@@ -46,38 +40,56 @@
     </section>
 
 
+    <!-- GALAXIA -->
+    <section id="galaxia">
 
-    <section id="escena">
+        <h2 id="titulo-superior">
+            FELIZ HOTWHEELS
+        </h2>
 
+        <div id="estrellas"></div>
 
-        <div class="luz-central"></div>
+        <div id="corazones"></div>
 
+        <div class="brillo-central"></div>
 
-        <!-- MOTOS -->
+        <div class="anillo anillo1"></div>
+        <div class="anillo anillo2"></div>
+        <div class="anillo anillo3"></div>
 
-        <div id="contenedor-motos"></div>
+        <div id="universo"></div>
 
+        <!-- RAMO -->
+        <div id="centro">
 
-        <!-- PALABRAS -->
+            <div class="halo"></div>
 
-        <div id="contenedor-palabras"></div>
+            <img
+                src="./img/RAMO.png"
+                id="ramo"
+                alt="Ramo"
+            >
 
+            <div class="centro-texto">
+                Para ti ❤️
+            </div>
 
-        <!-- RAMO CENTRAL -->
-
-        <img
-            src="img/RAMO.png"
-            id="ramo"
-            alt="Ramo"
-        >
-
+        </div>
 
     </section>
 
 
+    <!-- AUDIO -->
+    <p id="estado-musica" role="status" hidden></p>
+    <audio
+        id="musica"
+        src="./audio/musica-web.mp3"
+        preload="auto"
+    >
+    </audio>
+
 
     <script src="script.js"></script>
-
 
 </body>
 
